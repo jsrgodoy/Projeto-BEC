@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <link rel="icon" href="bec.jpg" />
+    <script src="/src/components/coleta.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coleta BEC</title>
+    <link rel="stylesheet" type="text/css" href="/src/styles/global.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="navDark">
+        <div class="logo">
+          <a href="index.html">
+            <img src="/src/assets/img/cruz.png" alt="logo-img" />
+          </a>
+        </div>
+        <div class="deixar-embaixo">
+          <ul class="sumirclick" id="hamburguer">
+            <li>
+              <a
+                class="aNavDark"
+                id="voltarpag"
+                href="/src/components/coleta.html"
+                >Coleta BEC</a
+              >
+            </li>
+            <li>
+              <a
+                class="aNavDark"
+                id="voltarpag2"
+                href="/src/components/agendamento.html"
+                >Agendamento BEC</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="meubodyDark">
+        <form class="card-login" id="coletaForm">
+          <h1>Coleta BEC</h1>
+          <div id="mensagemErro" style="color: red"></div>
+          <fieldset>
+            <label for="cnpj_cpf">CNPJ/CPF*</label>
+            <input
+              type="text"
+              id="cnpj_cpf"
+              name="cnpj_cpf"
+              minlength="12"
+              maxlength="20"
+              placeholder="00.000.000/0000-00"
+              required
+            />
+
+            <label for="email">E-mail*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Digite email para contato"
+              required
+            />
+
+            <label for="endereco">Endereço*</label>
+            <input
+              type="text"
+              id="endereco"
+              name="endereco"
+              maxlength="40"
+              placeholder="Digite seu endereço"
+              required
+            />
+
+            <label for="residuo">Modelo de Resíduos*</label>
+            <input
+              list="residuos"
+              id="residuo"
+              name="residuo"
+              maxlength="2"
+              placeholder="Escolha o modelo do resíduo"
+              required
+            />
+            <datalist id="residuos">
+              <option value="A"></option>
+              <option value="B"></option>
+              <option value="E"></option>
+            </datalist>
+
+            <label for="peso">Peso*</label>
+            <input
+              type="text"
+              id="peso"
+              name="peso"
+              minlength="1"
+              maxlength="200"
+              placeholder="Digite o peso"
+              required
+            />
+
+            <label for="quantidade">Quantidade*</label>
+            <input
+              type="number"
+              id="quantidade"
+              name="quantidade"
+              placeholder="Quantidade"
+              required
+            />
+
+            <label for="observacoes">Observações</label>
+            <input
+              type="text"
+              id="observacoes"
+              name="observacoes"
+              placeholder="Digite as observações"
+            />
+
+            <label for="data">Data*</label>
+            <input type="date" id="data" name="data" required />
+          </fieldset>
+          <button type="button" class="button" id="enviarColeta">Enviar</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

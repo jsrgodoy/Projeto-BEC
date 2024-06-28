@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <link rel="icon" href="bec.jpg" />
+    <script src="/src/components/agendamento.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agendamento</title>
+    <link rel="stylesheet" type="text/css" href="/src/styles/global.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="navDark">
+        <div class="logo">
+          <a href="/src/components/coleta.html"
+            ><img src="/src/assets/img/costas.png" alt="logo-img"
+          /></a>
+        </div>
+        <div class="deixar-embaixo">
+          <ul class="sumirclick" id="hamburguer">
+            <li>
+              <a
+                class="aNavDark"
+                id="voltarpag"
+                href="/src/components/coleta.html"
+                >Coleta BEC</a
+              >
+            </li>
+            <li>
+              <a
+                class="aNavDark"
+                id="voltarpag2"
+                href="/src/components/agendamento.html"
+                >Agendamento BEC</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="container">
+        <div id="header">
+          <div id="monthDisplay"></div>
+          <div>
+            <button id="backButton">Voltar</button>
+            <button id="nextButton">Próximo</button>
+            <button id="clearButton">Limpar Registros</button>
+          </div>
+        </div>
+        <table id="weekdays">
+          <tr>
+            <th>Domingo</th>
+            <th>Segunda-feira</th>
+            <th>Terça-feira</th>
+            <th>Quarta-feira</th>
+            <th>Quinta-feira</th>
+            <th>Sexta-feira</th>
+            <th>Sábado</th>
+          </tr>
+        </table>
+        <div id="calendar"></div>
+      </div>
+      <div id="eventModal">
+        <div id="eventText"></div>
+        <button id="closeButton" class="hidden">Fechar</button>
+      </div>
+      <div id="modalBackDrop"></div>
+    </main>
+  </body>
+</html>

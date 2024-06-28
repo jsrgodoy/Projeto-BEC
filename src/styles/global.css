@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos Gerais */
+body {
+  background-color: #b5ffce;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header,
+main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+nav.active {
+  background-color: #51b4aab0;
+}
+
+header nav .logo img {
+  max-width: 50px;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  font-weight: bold;
+  font-size: 16px;
+  color: #6a7079;
+  transition: color 0.3s;
+}
+
+nav ul li a.active {
+  color: rgb(33, 177, 33);
+}
+
+nav ul li a:hover {
+  color: rgb(0, 106, 255);
+}
+
+.aNavDark {
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Coleta */
+section.meubodyDark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+form.card-login {
+  background: #cff3cd;
+  border-radius: 20px;
+  box-shadow: 9px 14px 19px #00000056;
+  padding: 4rem;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form.card-login h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+form.card-login fieldset {
+  border: none;
+  width: 100%;
+}
+
+form.card-login label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form.card-login input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form.card-login button.button {
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6a7079;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form.card-login button.button:hover {
+  background-color: #4a4a4a;
+}
+
+/* Estilos Agendamento */
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 10px;
+}
+
+#monthDisplay {
+  padding: 5px;
+}
+
+#weekdays {
+  width: 100%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#weekdays th {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 10px;
+}
+
+.day {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.event {
+  background-color: #fcffc4;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 2px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.modal.open {
+  display: block;
+}
+
+#modalBackDrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.09);
+  z-index: 999;
+}
+
+#modalBackDrop.open {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Keyframes */
+@-webkit-keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(2) rotateZ(180deg);
+    transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(2) rotateZ(180deg);
+    transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* Para telas de até 1200px */
+@media (max-width: 1200px) {
+  nav {
+    gap: 10px;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+}
+
+/* Para telas de até 900px */
+@media (max-width: 900px) {
+  nav ul {
+    gap: 5px;
+  }
+
+  form.card-login input {
+    padding: 8px;
+  }
+
+  form.card-login button.button {
+    padding: 8px 16px;
+  }
+
+  #header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #calendar {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+/* Para telas de até 600px */
+@media (max-width: 600px) {
+  nav ul {
+    gap: 5px;
+  }
+
+  form.card-login {
+    padding: 0.5rem;
+  }
+
+  form.card-login input {
+    padding: 5px;
+  }
+
+  form.card-login button.button {
+    padding: 5px 10px;
+  }
+
+  #header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #calendar {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
