@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function enviarEmail(coletaData) {
-        fetch('http://localhost:5174/send-email', {
+        fetch('/api/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

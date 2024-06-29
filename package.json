@@ -1,8 +1,8 @@
 {
-  "homepage":"https://jsrgodoy.github.io/Projeto-BEC",
+  "main": "server.js",
   "name": "projeto-bec",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "commonjs",
   "scripts": {
     "dev": "vite",
