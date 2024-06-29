@@ -8,5 +8,5 @@ export default defineConfig({
   server: {
     port: 5174,
   },
-  base:"/Projeto-BEC",
+
 })
