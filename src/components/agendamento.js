@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const eventText = document.getElementById('eventText');
     const modalBackDrop = document.getElementById('modalBackDrop');
     const closeButton = document.getElementById('closeButton');
-    const clearButton = document.getElementById('clearButton');
 
     let nav = 0;
     let clicked = null;
@@ -77,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const dayColetas = coletas.filter(e => e.date.split('T')[0] === clicked);
 
         if (dayColetas.length > 0) {
-            eventText.innerHTML = dayColetas.map(e => `
+            eventText.innerHTML = dayColetas.map((e, index) => `
                 <div class="event">
                     <p>Email: ${e.email}</p>
                     <p>Endereço: ${e.endereco}</p>
@@ -85,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p>Peso: ${e.peso}</p>
                     <p>Quantidade: ${e.quantidade}</p>
                     <p>Observações: ${e.observacoes}</p>
+                    <button onclick="deleteColeta(${index})">Excluir</button>
                 </div>
             `).join('');
         } else {
@@ -93,14 +93,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
         eventModal.classList.add('open');
         modalBackDrop.classList.add('open');
-       /*  closeButton.classList.remove('hidden'); */ // Mostra o botão quando o modal é aberto
+    };
+
+    window.deleteColeta = (index) => {
+        coletas.splice(index, 1);
+        localStorage.setItem('coletas', JSON.stringify(coletas));
+        closeModal();
+        load();
     };
 
     const closeModal = () => {
         eventModal.classList.remove('open');
         modalBackDrop.classList.remove('open');
         eventText.innerHTML = '';
-        closeButton.classList.add('hidden'); // Esconde o botão quando o modal é fechado
     };
 
     const initButtons = () => {
@@ -111,12 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById('nextButton').addEventListener('click', () => {
             nav++;
-            load();
-        });
-
-        clearButton.addEventListener('click', () => {
-            localStorage.removeItem('coletas');
-            coletas.length = 0;
             load();
         });
 
