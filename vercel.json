@@ -1,16 +1,16 @@
 {
-"version": 2,
-"builds": [
-    {
-        
-        "use":"@vercel/node"
-    }
-],
-"routes": [
-    {
-        "src":"(.*)",
+    "version": 2,
+    "builds": [
+      {
+        "src": "email-server/server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
         "dest": "email-server/server.js"
-    }
-]
-
-}
+      }
+    ]
+  }
+  
