@@ -13,10 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Por favor, preencha todos os campos obrigatórios.');
             return;
         }
-        function fecharPagina() {
-            window.close(); // Fecha a janela atual
-          }
-
+             
         const coletaData = {
             cnpj_cpf: cnpj_cpf,
             email: email,
