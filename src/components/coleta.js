@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             body: JSON.stringify({
                 email: coletaData.email,
-                subject: 'Nova Coleta Agendada',
+                subject: 'BEC - Nova Coleta Agendada',
                 text: `Uma nova coleta foi agendada com os seguintes detalhes:
                 CNPJ/CPF: ${coletaData.cnpj_cpf}
                 Endereço: ${coletaData.endereco}

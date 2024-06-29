@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   root: '.',
   server: {
-    port: 5173,
+    port: 5174,
   },
+  base:"/Projeto-BEC",
 })
