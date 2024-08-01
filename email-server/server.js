@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'jsrgodoy@gmail.com', // Atualize com seu email
-    pass: 'gnke usub ddxf aniq' // Atualize com sua senha de app do gmail
+    pass: '' // Atualize com sua senha de app do gmail
   }
 });
 
